@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="Stylesheet" href="style.css">
+</head>
+<body>
+
+      <div class="search_box">
+    <form id="searchForm">
+      <input type="text" id="searchInput" placeholder="Enter city name">
+      <button type="submit">Search</button>
+      
+    </form>
+     <ul id="suggestions" class="suggestion-box"></ul>
+  </div>
+
+  <div class="dashboard">
+ 
+  <div class="main_display">
+    <div class="date_time" id="dateTime">21 April 2023 11:00</div>
+         <div class="location" id="location">Tbilisi, Georgia</div>
+    <div class="temperature" id="temperature">11°C</div>
+    <div class="condition_text" id="condition">Heavy Rain</div>
+
+   
+    <div class="hourly_container" id="hourlyContainer"></div>
+  </div>
+
+ 
+  <div class="forecast_panel">
+       <h3>The Next Days Forecast</h3>
+        <div class="days_container" id="daysContainer"></div>
+  </div>
+</div>
+
+
+</body>
+    <script src="index.js"></script>
+</html>

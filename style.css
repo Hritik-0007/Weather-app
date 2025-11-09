@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: url("rainy.jpg") no-repeat center center / cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.search_box {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.search_box form {
+  display: flex;
+}
+
+.search_box input {
+  padding: 13px;
+  border: none;
+  border-radius: 20px 0 0 20px;
+  outline: none;
+  font-size: 16px;
+  background-color: transparent;
+  border:2px solid white;
+  color:black;
+}
+
+
+.search_box button {
+  padding: 10px 15px;
+  border: none;
+  background: rgb(54, 53, 53);
+  color: white;
+  cursor: pointer;
+  border-radius: 0 20px 20px 0;
+  transition: 0.3s;
+}
+
+.search_box button:hover {
+  background: white;
+}
+
+
+.dashboard {
+  display: flex;
+  width: 90%;
+  height: 90%;
+  background: rgba(0,0,0,0.4);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.main_display {
+  flex: 2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.forecast_panel {
+  flex: 1;
+  padding: 10px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  width:40px;
+}
+
+.temperature {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.condition_text {
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+.hourly_container {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.hour_card {
+  background: rgba(255,255,255,0.2);
+  padding: 4px;
+  border-radius: 10px;
+  min-width: 70px;
+  text-align: center;
+}
+
+.days_container .day_card {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.1);
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.suggestion-box{
+  position: absolute;
+  top: 45px; 
+  left: 0;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #555;
+  border-top: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  max-height: 150px;
+  overflow-y: auto;
+  border-radius: 0 0 10px 10px;
+  z-index: 10;
+  display: none;
+}
+
+.suggestion-box li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-box li:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+  .forecast_panel {
+    max-height: none;
+    overflow-y: visible;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .search_box {
+    width: 95%;
+    top:10px;
+  }
+
+  .search_box input {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .search_box button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .suggestion-box li {
+    padding: 8px;
+    font-size: 13px;
+  }
+  .dashboard{
+    flex-direction: column;
+    height:auto;
+    width:95%;
+  }
+  .forecast_panel {
+    flex: none;
+    width: 100%;                   
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+  }
+
+  .forecast_panel h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .days_container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 200px;           
+    overflow-y: auto;           
+
+  .day_card {
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 8px;
+  }
+  }
+  .day_card img {
+    width: 40px;
+    height: 40px;
+  }
+  
+}
